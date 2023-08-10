@@ -1,6 +1,5 @@
 /* RESET CSS */
 a, body, div, footer, h1, h2, h3, h4, h5, h6, header, html, i, img, label, li, menu, nav, p, s, section, span, ul {
-
     margin: 0;
     padding: 0;
     border: 0;
@@ -53,9 +52,6 @@ h2 {
     font-weight: 700;
     line-height: normal
 }
-
-
-/* HEADER */
 
 .header {
     display: flex;
@@ -780,9 +776,11 @@ footer {
     main {
         display: none;
     }
+
     .header {
         border-bottom: 1px solid #F2F2F2;
     }
+
     .header__nav {
         display: none;
     }
@@ -813,6 +811,4 @@ footer {
         letter-spacing: 0.078em;
         line-height: 25px;
     }
-
 }
-
