@@ -47,6 +47,8 @@ body {
 
 h2 {
     font-size: 1.375rem;
+    align-self: stretch;
+
     font-weight: 700;
     line-height: normal
 }
@@ -72,33 +74,42 @@ h2 {
 .header__nav-menu {
     display: flex;
     gap: 70px;
-    height: 100%
+}
+
+.header__nav-menu_item {
+    display: flex;
+    gap: 15px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
 }
 
 .header__nav-menu_item a {
-    position: relative;
-    display: inline-block;
-    height: 100%;
-    line-height: 48px;
-    transition: .1s ease-in-out
+    height: 33px;
+    display: flex;
+    align-items: flex-end;
+    transition: .1s ease-in-out;
+    justify-content: center;
 }
 
-.header__nav-menu_item a::before {
+.header__nav-menu_item::before {
     position: absolute;
     top: 0;
     content: "";
-    display: block;
     opacity: 0;
     width: 100%;
     border: 1px solid #0065fc;
-    transition: .3s ease-in-out
+    transition: .3s ease-in-out;
+    box-sizing: border-box;
+}
+
 }
 
 .header__nav-menu_item a:hover {
     color: #0065fc
 }
 
-.header__nav-menu_item a:hover:before {
+.header__nav-menu_item:hover:before {
     opacity: 1
 }
 
@@ -267,6 +278,8 @@ main {
 }
 
 .info__filter-item_icon svg {
+    width: 100%;
+    height: 100%;
     color: rgba(0, 101, 252, 1);
 }
 
@@ -285,6 +298,7 @@ main {
     border-radius: 50px;
     border: 1px solid rgba(217, 217, 217, 1);
     flex-shrink: 0;
+    box-sizing: border-box;
 }
 
 .info__info-bar_icon svg {
@@ -612,6 +626,10 @@ main {
         max-width: 1024px;
     }
 
+    .info__filter-item {
+        font-size: 1rem;
+    }
+
     .offers {
         flex-direction: column;
     }
@@ -657,12 +675,16 @@ main {
         height: unset;
         flex-direction: column;
         padding: unset;
+        align-items: center;
+    }
+
+    .header__nav {
+        padding: unset;
     }
 
     .header__nav-menu {
         gap: unset;
         align-self: stretch;
-        justify-content: center;
     }
 
     .header__nav-menu_item a {
@@ -670,9 +692,13 @@ main {
         text-align: center;
     }
 
-    .header__nav-menu_item a::before {
+    .header__nav-menu_item::before {
         top: unset;
         bottom: 0;
+    }
+
+    .header__nav-menu_item a {
+        align-items: flex-start;
     }
 
     .header__logo {
