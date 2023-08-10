@@ -114,7 +114,7 @@ h2 {
 main {
     display: flex;
     padding: 0 50px;
-    margin: 30px auto 0 !important;
+    margin: 30px auto 35px !important;
     flex-direction: column;
     align-items: flex-start;
     gap: 35px;
@@ -191,6 +191,7 @@ main {
 .info__search-bar_button {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
     padding: 15px 16px;
     height: 49px;
     border-radius: 0 15px 15px 0;
@@ -669,6 +670,10 @@ main {
         box-sizing: border-box;
     }
 
+    main {
+        align-items: unset;
+    }
+
     .header {
         height: unset;
         flex-direction: column;
@@ -806,11 +811,13 @@ main {
         height: 141px;
     }
 
-    footer {
+
+    .footer__wrapper {
         flex-direction: column;
         gap: 50px;
         align-items: self-start;
         padding: 30px !important;
+        margin: unset;
     }
 }
 
@@ -821,6 +828,18 @@ main {
 @media (max-width: 375px) {
     .offers__card-row {
         flex-direction: column;
+    }
+
+    .info__search-bar {
+        align-self: stretch;
+    }
+
+    .info__search-bar_input, .info__search-bar_input::placeholder {
+        max-width: unset;
+    }
+
+    .footer__block {
+        padding: unset;
     }
 }
 
