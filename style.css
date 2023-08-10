@@ -728,11 +728,14 @@ footer {
 
     .offers__popular-list {
         gap: 15px;
-        flex-direction: column;
     }
 
     .offers__card.horizontal .offers_card-wrapper {
         width: 110px;
+    }
+
+    .offers__card.vertical {
+        max-width: 335px;
     }
 
     .offers__main {
@@ -745,7 +748,6 @@ footer {
     }
 
     .offers__card-row {
-        flex-direction: column;
         gap: 15px;
     }
 
@@ -753,6 +755,11 @@ footer {
         flex-direction: column;
         gap: 15px;
         align-self: stretch;
+        align-items: center;
+    }
+
+    .activity__card {
+        width: 335px;
     }
 
     .activity__image-wrapper {
@@ -772,6 +779,12 @@ footer {
     display: none;
 }
 
+@media (max-width: 375px) {
+    .offers__card-row {
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 374px) {
     main {
         display: none;
@@ -784,6 +797,7 @@ footer {
     .header__nav {
         display: none;
     }
+
 
     footer {
         display: none;
