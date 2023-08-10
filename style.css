@@ -123,32 +123,42 @@ h2 {
 }
 
 .info__search-bar {
-    display: inline-flex;
-    border: 1px solid #f2f2f2;
+    display: flex;
+    gap: 24px;
     border-radius: 15px;
-    overflow: hidden
+    border: 1px solid #F2F2F2;
+    box-sizing: border-box;
+    background: #FFF;
+    overflow: hidden;
 }
 
 .info__search-bar_icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
-    border: 1px solid #f2f2f2;
-    background: #f2f2f2;
     flex-shrink: 0;
+    width: 50px;
+    height: 49px;
+    background: #F2F2F2FF;
 }
 
-.info__search-bar_input {
+.info__search-bar_label {
+    display: none;
+}
+
+.info__search-bar_input, .info__search-bar_input::placeholder {
+    font-family: Raleway, sans-serif;
+    padding: 0;
+    margin: 0;
     border: none;
-    font-weight: 700;
+    box-sizing: border-box;
     font-size: 1.125rem;
-    padding: 0 24px;
-}
-
-.info__search-bar_input::placeholder {
-    white-space: normal
+    font-weight: 700;
+    line-height: normal;
+    text-align: left;
+    max-width: 147px;
+    color: #000;
+    letter-spacing: -0.54px;
 }
 
 .info__search-bar_input:focus-visible {
@@ -158,10 +168,13 @@ h2 {
 .info__search-bar_button {
     display: flex;
     align-items: center;
-    border: 1px solid #0065fc;
-    border-radius: 0 15px 15px 0;
     padding: 15px 16px;
-    background: #0065fc;
+    height: 49px;
+    border-radius: 0 15px 15px 0;
+    box-sizing: border-box;
+    border: 1px solid #0065FC;
+    background: #0065FC;
+    overflow: hidden;
     transition: background .15s ease-in-out
 }
 
@@ -176,6 +189,7 @@ h2 {
     color: #FFF;
     font-size: 1.125rem;
     font-weight: 700;
+    line-height: normal;
 }
 
 .info__search-bar_button:hover {
@@ -813,3 +827,4 @@ footer {
         line-height: 25px;
     }
 }
+
