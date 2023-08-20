@@ -829,12 +829,20 @@ main {
         max-width: unset;
     }
 
+    .info__filter-item {
+        padding: 14px 0;
+    }
+
+    .activity__card {
+        align-self: stretch;
+    }
+
     .footer__block {
         padding: unset;
     }
 }
 
-@media (max-width: 374px) {
+@media (max-width: 319px) {
     main {
         display: none;
     }
